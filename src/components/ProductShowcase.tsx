@@ -1,7 +1,6 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 
 interface ProductShowcaseProps {
   productImage: string;
@@ -26,11 +25,10 @@ export const ProductShowcase = ({
           <div className="space-y-2">
             <h3 className="font-medium">Изделие</h3>
             <div className="relative aspect-square rounded-lg overflow-hidden">
-              <Image
+              <img
                 src={productImage}
                 alt={title}
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -39,11 +37,10 @@ export const ProductShowcase = ({
             <div className="grid grid-cols-2 gap-2">
               {photoshootImages.map((img, index) => (
                 <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
-                  <Image
+                  <img
                     src={img}
                     alt={`${title} фотосессия ${index + 1}`}
-                    fill
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
