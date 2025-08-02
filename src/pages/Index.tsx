@@ -53,9 +53,18 @@ const Index = () => {
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Получите фотографии ваших товаров в различных стилях и локациях без дорогих фотосессий
         </p>
-        <Button size="lg" className="text-lg">
+        {/* <Button size="lg" className="text-lg">
           Попробовать бесплатно
-        </Button>
+        </Button> */}
+        <a
+          href="https://t.me/fsvm_aifashion_bot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button size="lg" className="text-lg">
+            Попробовать бесплатно
+          </Button>
+        </a>
       </section>
 
       {/* How it works */}
