@@ -44,7 +44,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        // className={cn(buttonVariants({ variant, size, className }))}
+        // где-то внутри компонента Button
+        className={`... bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] ...`}
+
         ref={ref}
         {...props}
       />

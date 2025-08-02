@@ -4,78 +4,103 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
+// Пример картинок для блока "Примеры работ"
+const examples = [
+  {
+    before: "/images/before1.jpg",
+    after: "/images/after1.jpg",
+    title: "Кожаная сумка",
+    desc: "Фотосессия в городском стиле"
+  },
+  {
+    before: "/images/before2.jpg",
+    after: "/images/after2.jpg",
+    title: "Зимнее пальто",
+    desc: "Фото в зимнем лесу"
+  },
+  {
+    before: "/images/before3.jpg",
+    after: "/images/after3.jpg",
+    title: "Вечернее платье",
+    desc: "Фотосессия на фоне заката"
+  }
+];
+
+const features = [
+  {
+    title: "Быстро",
+    desc: "Генерация за 5 минут"
+  },
+  {
+    title: "Дёшево",
+    desc: "В 10 раз дешевле фотостудии"  
+  },
+  {
+    title: "Удобно",
+    desc: "Не нужно никуда ехать"
+  }
+];
+
 const Index = () => {
-  const examples = [
-    {
-      before: "/placeholder.svg",
-      after: "/placeholder.svg",
-      title: "Кожаная сумка",
-      desc: "Фотосессия в городском стиле"
-    },
-    {
-      before: "/placeholder.svg", 
-      after: "/placeholder.svg",
-      title: "Зимнее пальто",
-      desc: "Фото в зимнем лесу"
-    },
-    {
-      before: "/placeholder.svg",
-      after: "/placeholder.svg",
-      title: "Вечернее платье",
-      desc: "Фотосессия на фоне заката"
-    }
-  ];
-
-  const features = [
-    {
-      title: "Быстро",
-      desc: "Генерация за 5 минут"
-    },
-    {
-      title: "Дёшево",
-      desc: "В 10 раз дешевле фотостудии"  
-    },
-    {
-      title: "Удобно",
-      desc: "Не нужно никуда ехать"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="py-20 px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Профессиональные фэшн-фотосессии
-          <br />
-          <span className="text-primary">сгенерированные ИИ</span>
+    <div className="min-h-screen bg-black text-white relative font-sans">
+      {/* -------------------- Навигация -------------------- */}
+      <nav className="flex justify-between items-center px-8 md:px-20 py-6 z-20">
+        <div className="flex items-center gap-3">
+          {/* Логотип (замени на свой!) */}
+          <img src="/logo.svg" alt="Logo" className="h-8" />
+          <span className="text-2xl font-extrabold">AI Fashion</span>
+        </div>
+        <div className="flex gap-8 text-lg font-medium">
+          <a href="#features" className="hover:text-violet-400 transition">Возможности</a>
+          <a href="#how" className="hover:text-violet-400 transition">Как это работает</a>
+          <a href="#examples" className="hover:text-violet-400 transition">Примеры</a>
+          <a href="#team" className="hover:text-violet-400 transition">О команде</a>
+        </div>
+      </nav>
+
+      {/* -------------------- HERO -------------------- */}
+      <section className="relative flex flex-col gap-6 items-start justify-center min-h-[70vh] px-8 md:px-20 z-10">
+        <span className="border border-gray-400 rounded-full px-5 py-1 text-sm opacity-80 mb-4 bg-black/40 text-white">
+          beta-тестирование
+        </span>
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-2 leading-tight">
+          AI сервис для разработчиков&nbsp;
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259]">
+            Fashion-фотосессии онлайн
+          </span>
         </h1>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Получите фотографии ваших товаров в различных стилях и локациях без дорогих фотосессий
+        <p className="text-xl mb-8 opacity-90 max-w-2xl">
+          Получите фотографии ваших товаров в различных стилях и локациях с помощью искусственного интеллекта — быстро, удобно и без студий.
         </p>
-        {/* <Button size="lg" className="text-lg">
-          Попробовать бесплатно
-        </Button> */}
         <a
           href="https://t.me/fsvm_aifashion_bot"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button size="lg" className="text-lg">
+          <button
+            className="px-8 py-3 rounded-full text-lg font-bold bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] text-white shadow-lg transition hover:scale-105"
+          >
             Попробовать бесплатно
-          </Button>
+          </button>
         </a>
+        {/* Абстрактный фон (замени путь на свой арт!) */}
+        <img
+          src="/images/ai-bg.png"
+          alt="AI abstract"
+          className="absolute right-0 top-0 w-2/3 max-w-[900px] opacity-80 pointer-events-none select-none z-0"
+        />
       </section>
 
-      {/* How it works */}
-      <section className="py-16 bg-secondary/10">
-        <div className="container">
+      {/* -------------------- How it works -------------------- */}
+      <section id="how" className="py-16 bg-white/5">
+        <div className="container px-4 mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Как это работает</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[1, 2, 3].map((step) => (
               <Card key={step}>
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#a259ff] to-[#ffe259] text-white flex items-center justify-center text-xl font-bold mb-4">
                     {step}
                   </div>
                   <CardTitle>
@@ -85,9 +110,9 @@ const Index = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  {step === 1 && "Отправьте нам фотографию вашего изделия на белом фоне"}
-                  {step === 2 && "Подберите подходящий стиль из нашей коллекции"}
-                  {step === 3 && "Скачайте готовые профессиональные снимки"}
+                  {step === 1 && "Отправьте фотографию изделия на белом фоне"}
+                  {step === 2 && "Подберите стиль из коллекции"}
+                  {step === 3 && "Скачайте готовые снимки"}
                 </CardContent>
               </Card>
             ))}
@@ -95,8 +120,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Examples */}
-      <section className="py-16 container">
+      {/* -------------------- Примеры работ -------------------- */}
+      <section id="examples" className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center">Примеры работ</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {examples.map((example, i) => (
@@ -130,9 +155,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-16 bg-secondary/10">
-        <div className="container">
+      {/* -------------------- Почему выбирают нас -------------------- */}
+      <section id="features" className="py-16 bg-white/5">
+        <div className="container px-4 mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Почему выбирают нас</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, i) => (
@@ -145,8 +170,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 container max-w-2xl">
+      {/* -------------------- CTA -------------------- */}
+      <section className="py-16 container max-w-2xl mx-auto">
         <Card>
           <CardHeader>
             <CardTitle className="text-center text-2xl">
@@ -158,7 +183,15 @@ const Index = () => {
               <Input placeholder="Ваше имя" />
               <Input placeholder="Email" type="email" />
               <Input placeholder="Телефон" type="tel" />
-              <Button className="w-full">Отправить заявку</Button>
+              <a
+                href="https://t.me/fsvm_aifashion_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] text-white text-lg font-bold">
+                  Попробовать через Telegram-бота
+                </Button>
+              </a>
             </div>
           </CardContent>
         </Card>

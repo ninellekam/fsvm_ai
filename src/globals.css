@@ -95,7 +95,13 @@
     @apply border-border;
   }
 
-  body {
+  /* body {
     @apply bg-background text-foreground;
+  } */
+  body {
+    background: #0a0a0a; /* почти чёрный фон */
+    color: #fff;         /* белый цвет текста */
+    font-family: 'Inter', 'Montserrat', Arial, sans-serif;
   }
+
 }
