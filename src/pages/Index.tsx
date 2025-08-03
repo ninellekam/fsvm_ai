@@ -70,7 +70,7 @@ const Index = () => {
     beta-тестирование
   </span> */}
   <h1 className="text-5xl md:text-6xl font-extrabold mb-2 leading-tight">
-    AI сервис для разработчиков
+    AI фотограф для вашего бренда
     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259]">
       Фотосессии онлайн
     </span>
