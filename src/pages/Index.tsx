@@ -171,7 +171,7 @@ const Index = () => {
       </section>
 
       {/* -------------------- CTA -------------------- */}
-      <section className="py-16 container max-w-2xl mx-auto">
+      {/* <section className="py-16 container max-w-2xl mx-auto">
         <Card>
           <CardHeader>
             <CardTitle className="text-center text-2xl">
@@ -195,7 +195,7 @@ const Index = () => {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </section> */}
 
       <MadeWithDyad />
     </div>
