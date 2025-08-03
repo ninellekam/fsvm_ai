@@ -1,10 +1,18 @@
+// "use client";
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import { Input } from "@/components/ui/input";
+// import { MadeWithDyad } from "@/components/made-with-dyad";
 "use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { MadeWithDyad } from "@/components/made-with-dyad";
-
+// Import Particles.js
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles"; // If using full version
 // Пример картинок для блока "Примеры работ"
+
 const examples = [
   {
     before: "./images/3.jpg",
@@ -42,169 +50,102 @@ const features = [
 ];
 
 const Index = () => {
+  const particlesInit = async (main) => {
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(main);
+  };
+
+  const particlesLoaded = (container) => {
+    // console.log(container);
+  };
+
   return (
     <div className="min-h-screen bg-black text-white relative font-sans">
-      {/* -------------------- Навигация -------------------- */}
-      <nav className="flex justify-between items-center px-8 md:px-20 py-6 z-20">
-        <div className="flex items-center gap-3">
-          {/* Логотип (замени на свой!) */}
-          <img src="/logo.svg" alt="Logo" className="h-8" />
-          <span className="text-2xl font-extrabold">AI Fashion</span>
-        </div>
-        <div className="flex gap-8 text-lg font-medium">
-          <a href="#features" className="hover:text-violet-400 transition">Возможности</a>
-          <a href="#how" className="hover:text-violet-400 transition">Как это работает</a>
-          <a href="#examples" className="hover:text-violet-400 transition">Примеры</a>
-          {/* <a href="#team" className="hover:text-violet-400 transition">О команде</a> */}
-        </div>
-      </nav>
-
-      {/* -------------------- HERO -------------------- */}
-      <section className="relative flex flex-col justify-center min-h-[70vh] px-8 md:px-20 overflow-hidden bg-black">
-      {/* Абстрактная фигура, выровненная по центру, с прозрачностью */}
-      <img
-        src="/images/ai-bg.png"
-        alt=""
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] max-w-[95vw] opacity-90 pointer-events-none select-none z-0"
-        style={{
-          filter: "drop-shadow(0 0 80px #a259ff33)"
+       {/* Particles background */}
+       <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          background: {
+            color: {
+              value: "#000", // Black background
+            },
+          },
+          fpsLimit: 60, // Limit FPS for performance
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push", // Add particles on click
+              },
+              onHover: {
+                enable: true,
+                mode: "repulse", // Repel particles on hover
+              },
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 4, // Number of particles to add on click
+              },
+              repulse: {
+                distance: 200, // Repulsion distance
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: ["#a259ff", "#ff6f6f", "#ffe259"], // Gradient colors
+            },
+            links: {
+              color: "#ffffff", // White links
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: true, // Enable collisions for bounce effect
+            },
+            move: {
+              direction: "none", // Or try "top", "bottom", etc.
+              enable: true,
+              outModes: {
+                default: "bounce", // Bounce off edges
+              },
+              random: false,
+              speed: 2, // Adjust speed
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 80, // Adjust number of particles
+            },
+            opacity: {
+              value: 0.5, // Adjust opacity
+            },
+            shape: {
+              type: "circle", // Or try "edge", "polygon", etc.
+            },
+            size: {
+              value: { min: 1, max: 5 }, // Adjust particle size
+            },
+          },
+          detectRetina: true, // For better quality on retina displays
         }}
       />
-
-  {/* <span className="border border-gray-400 rounded-full px-5 py-1 text-sm opacity-80 mb-4 bg-black/40 text-white">
-    beta-тестирование
-  </span> */}
-  <h1 className="text-5xl md:text-6xl font-extrabold mb-2 leading-tight">
-    AI фотограф для вашего бренда
-    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259]">
-      Фотосессии онлайн
-    </span>
-  </h1>
-  <p className="text-xl mb-8 opacity-90 max-w-2xl">
-    Получите фотографии ваших товаров в различных стилях и локациях с помощью искусственного интеллекта — быстро, удобно и без студий.
-  </p>
-  <a
-    href="https://t.me/fsvm_aifashion_bot"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <button
-      className="px-8 py-3 rounded-full text-lg font-bold bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] text-white shadow-lg transition hover:scale-105"
-    >
-      Попробовать бесплатно
-    </button>
-  </a>
-</section>
-
-
-      {/* -------------------- How it works -------------------- */}
-      <section id="how" className="py-16 bg-white/5">
-        <div className="container px-4 mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Как это работает</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((step) => (
-              <Card key={step}>
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#a259ff] to-[#ffe259] text-white flex items-center justify-center text-xl font-bold mb-4">
-                    {step}
-                  </div>
-                  <CardTitle>
-                    {step === 1 && "Загрузите фото товара"}
-                    {step === 2 && "Выберите стиль"}
-                    {step === 3 && "Получите фотосессию"}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {step === 1 && "Отправьте фотографию изделия на белом фоне"}
-                  {step === 2 && "Подберите стиль из коллекции"}
-                  {step === 3 && "Скачайте готовые снимки"}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* -------------------- Примеры работ -------------------- */}
-      <section id="examples" className="py-16 container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Примеры работ</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {examples.map((example, i) => (
-            <Card key={i}>
-              <div className="grid grid-cols-2 gap-2 p-2">
-                <div>
-                  <img 
-                    src={example.before} 
-                    alt="До" 
-                    className="w-full h-48 object-cover rounded"
-                  />
-                  <p className="text-sm text-center mt-2">Оригинал</p>
-                </div>
-                <div>
-                  <img
-                    src={example.after}
-                    alt="После"
-                    className="w-full h-48 object-cover rounded"
-                  />
-                  <p className="text-sm text-center mt-2">Фотосессия</p>
-                </div>
-              </div>
-              <CardHeader>
-                <CardTitle>{example.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{example.desc}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* -------------------- Почему выбирают нас -------------------- */}
-      <section id="features" className="py-16 bg-white/5">
-        <div className="container px-4 mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Почему выбирают нас</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, i) => (
-              <div key={i} className="text-center">
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p>{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* -------------------- CTA -------------------- */}
-      {/* <section className="py-16 container max-w-2xl mx-auto">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-center text-2xl">
-              Готовы попробовать?
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <Input placeholder="Ваше имя" />
-              <Input placeholder="Email" type="email" />
-              <Input placeholder="Телефон" type="tel" />
-              <a
-                href="https://t.me/fsvm_aifashion_bot"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="w-full bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] text-white text-lg font-bold">
-                  Попробовать через Telegram-бота
-                </Button>
-              </a>
-            </div>
-          </CardContent>
-        </Card>
-      </section> */}
-
-      <MadeWithDyad />
+      {/* Rest of your component code */}
+      {/* ... */}
     </div>
   );
 };
+
 
 export default Index;
