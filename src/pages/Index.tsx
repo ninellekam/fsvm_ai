@@ -60,37 +60,37 @@ const Index = () => {
       </nav>
 
       {/* -------------------- HERO -------------------- */}
-      <section className="relative flex flex-col gap-6 items-start justify-center min-h-[70vh] px-8 md:px-20 z-10">
-        <span className="border border-gray-400 rounded-full px-5 py-1 text-sm opacity-80 mb-4 bg-black/40 text-white">
-          beta-тестирование
-        </span>
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-2 leading-tight">
-          AI сервис для разработчиков&nbsp;
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259]">
-            Fashion-фотосессии онлайн
-          </span>
-        </h1>
-        <p className="text-xl mb-8 opacity-90 max-w-2xl">
-          Получите фотографии ваших товаров в различных стилях и локациях с помощью искусственного интеллекта — быстро, удобно и без студий.
-        </p>
-        <a
-          href="https://t.me/fsvm_aifashion_bot"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button
-            className="px-8 py-3 rounded-full text-lg font-bold bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] text-white shadow-lg transition hover:scale-105"
-          >
-            Попробовать бесплатно
-          </button>
-        </a>
-        {/* Абстрактный фон (замени путь на свой арт!) */}
-        <img
-          src="/images/ai-bg.png"
-          alt="AI abstract"
-          className="absolute right-0 top-0 w-2/3 max-w-[900px] opacity-80 pointer-events-none select-none z-0"
-        />
-      </section>
+      <section
+  className="relative flex flex-col gap-6 items-start justify-center min-h-[70vh] px-8 md:px-20 z-10"
+  style={{
+    background: `url('/images/ai-bg.png') right center / contain no-repeat, #0a0a0a`
+  }}
+>
+  {/* <span className="border border-gray-400 rounded-full px-5 py-1 text-sm opacity-80 mb-4 bg-black/40 text-white">
+    beta-тестирование
+  </span> */}
+  <h1 className="text-5xl md:text-6xl font-extrabold mb-2 leading-tight">
+    AI сервис для разработчиков
+    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259]">
+      Фотосессии онлайн
+    </span>
+  </h1>
+  <p className="text-xl mb-8 opacity-90 max-w-2xl">
+    Получите фотографии ваших товаров в различных стилях и локациях с помощью искусственного интеллекта — быстро, удобно и без студий.
+  </p>
+  <a
+    href="https://t.me/fsvm_aifashion_bot"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button
+      className="px-8 py-3 rounded-full text-lg font-bold bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] text-white shadow-lg transition hover:scale-105"
+    >
+      Попробовать бесплатно
+    </button>
+  </a>
+</section>
+
 
       {/* -------------------- How it works -------------------- */}
       <section id="how" className="py-16 bg-white/5">
