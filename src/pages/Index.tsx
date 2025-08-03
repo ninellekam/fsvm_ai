@@ -14,7 +14,7 @@ const examples = [
   },
   {
     before: "./images/2.jpg",
-    after: "./images/5.jpg",
+    after: "./images/5.png",
     title: "Мини юбка с ремнем",
     desc: "Фотосессия в горах"
   },
