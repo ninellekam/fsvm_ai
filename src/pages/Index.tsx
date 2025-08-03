@@ -7,22 +7,22 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 // Пример картинок для блока "Примеры работ"
 const examples = [
   {
-    before: "/images/before1.jpg",
-    after: "/images/after1.jpg",
-    title: "Кожаная сумка",
-    desc: "Фотосессия в городском стиле"
+    before: "/images/3.jpg",
+    after: "/images/skirt.jpg",
+    title: "Юбка плетенная",
+    desc: "Фотосессия в стиле Дюна"
   },
   {
-    before: "/images/before2.jpg",
-    after: "/images/after2.jpg",
-    title: "Зимнее пальто",
-    desc: "Фото в зимнем лесу"
+    before: "/images/2.jpg",
+    after: "/images/5.jpg",
+    title: "Мини юбка с ремнем",
+    desc: "Фотосессия в горах"
   },
   {
-    before: "/images/before3.jpg",
-    after: "/images/after3.jpg",
-    title: "Вечернее платье",
-    desc: "Фотосессия на фоне заката"
+    before: "/images/7.jpg",
+    after: "/images/8.jpg",
+    title: "Юбка с разрезом на ногу",
+    desc: "Фотосессия в Марокко"
   }
 ];
 
