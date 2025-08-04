@@ -61,15 +61,15 @@ const Index = () => {
 
       {/* -------------------- HERO -------------------- */}
       <section className="relative flex flex-col justify-center min-h-[70vh] px-8 md:px-20 overflow-hidden bg-black">
-      {/* Абстрактная фигура, выровненная по центру, с прозрачностью */}
-      <img
-        src="/images/ai-bg.png"
-        alt=""
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] max-w-[95vw] opacity-90 pointer-events-none select-none z-0"
-        style={{
-          filter: "drop-shadow(0 0 80px #a259ff33)"
-        }}
-      />
+    {/* Абстрактная фигура, выровненная по центру, с прозрачностью */}
+    <img
+      src="/images/ai-bg.png"
+      alt=""
+      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] max-w-[95vw] opacity-90 pointer-events-none select-none z-0"
+      style={{
+        filter: "drop-shadow(0 0 80px #a259ff33)"
+      }}
+    />
 
   {/* <span className="border border-gray-400 rounded-full px-5 py-1 text-sm opacity-80 mb-4 bg-black/40 text-white">
     beta-тестирование
