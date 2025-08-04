@@ -74,13 +74,13 @@ const Index = () => {
   {/* <span className="border border-gray-400 rounded-full px-5 py-1 text-sm opacity-80 mb-4 bg-black/40 text-white">
     beta-тестирование
   </span> */}
-  <h1 className="text-5xl md:text-6xl font-extrabold mb-2 leading-tight">
+  <h1 className="text-4xl md:text-5xl font-bold mb-2 leading-tight">
     AI фотограф для вашего бренда
-    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259]">
+    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] font-normal">
       Фотосессии онлайн
     </span>
   </h1>
-  <p className="text-xl mb-8 opacity-90 max-w-2xl">
+  <p className="text-lg md:text-xl mb-8  max-w-2xl"> 
     Получите фотографии ваших товаров в различных стилях и локациях с помощью искусственного интеллекта — быстро, удобно и без студий.
   </p>
   <a
