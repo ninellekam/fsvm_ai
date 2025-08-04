@@ -76,9 +76,6 @@ const Index = () => {
   </span> */}
 <h1 className="text-4xl md:text-4xl font-bold mb-2 leading-tight">
   AI фотограф для вашего бренда
-  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#a259ff] via-[#ff6f6f] to-[#ffe259] font-normal">
-    Фотосессии онлайн
-  </span>
 </h1>
 <p className="text-lg md:text-xl mb-8 max-w-2xl">
   Получите фотографии ваших товаров в различных стилях и локациях с помощью искусственного интеллекта — быстро, удобно и без студий.
