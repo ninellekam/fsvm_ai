@@ -210,6 +210,97 @@
 "use client";
 
 import React, { useState } from "react";
+
+// "use client";
+
+// import React, { useEffect, useRef } from "react";
+
+export function BackgroundFX() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const onScroll = () => {
+      const y = window.scrollY || 0;
+      // Лёгкий параллакс: две оси и масштаб
+      el.style.setProperty("--p1", `${y * 0.04}px`);
+      el.style.setProperty("--p2", `${y * -0.03}px`);
+      el.style.setProperty("--p3", `${y * 0.02}px`);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="fixed inset-0 -z-10 pointer-events-none"
+      aria-hidden
+    >
+      {/* Блики, цвета берём из CSS-переменных --c1/--c2/--c3 */}
+      <div className="fx fx1" />
+      <div className="fx fx2" />
+      <div className="fx fx3" />
+
+      <style>{`
+        :root {
+          /* Стартовая палитра — как в hero */
+          --c1: #7b5cff; /* фиолетовый */
+          --c2: #ff6f6f; /* коралл/красный */
+          --c3: #ffe259; /* янтарь/жёлтый */
+        }
+        .fx {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(80px);
+          opacity: .25;
+          mix-blend-mode: screen;
+          will-change: transform;
+          transition:
+            background 500ms ease,
+            opacity 500ms ease;
+        }
+        .fx1 {
+          /* слева-сверху */
+          width: 52vmin; height: 52vmin;
+          left: -10vmin; top: 10vmin;
+          background: radial-gradient(closest-side, var(--c1), transparent 70%);
+          transform: translate3d(0, var(--p1, 0), 0);
+        }
+        .fx2 {
+          /* справа-сверху */
+          width: 56vmin; height: 56vmin;
+          right: -14vmin; top: 4vmin;
+          background: radial-gradient(closest-side, var(--c2), transparent 70%);
+          transform: translate3d(0, var(--p2, 0), 0);
+        }
+        .fx3 {
+          /* центр-низ (большой мягкий) */
+          width: 72vmin; height: 72vmin;
+          left: 50%; bottom: -12vmin; transform: translateX(-50%) translate3d(0, var(--p3,0), 0);
+          background: radial-gradient(closest-side, var(--c3), transparent 75%);
+          opacity: .18;
+        }
+
+        @media (max-width: 768px) {
+          .fx { filter: blur(70px); }
+          .fx1 { width: 70vmin; height: 70vmin; left: -20vmin; top: 18vmin; }
+          .fx2 { width: 70vmin; height: 70vmin; right: -24vmin; top: 6vmin; }
+          .fx3 { width: 90vmin; height: 90vmin; bottom: -18vmin; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .fx1, .fx2, .fx3 { transform: none !important; }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
