@@ -128,7 +128,7 @@ export default function Index() {
           <div className="mt-3 mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl">
             <div className="flex items-center gap-3">
               {/* Замените логотип */}
-              <img src="/logo.jpg" alt="Logo" className="h-8 w-8" />
+              <img src="/images/logo.jpg" alt="Logo" className="h-8 w-8" />
               <span className="text-xl md:text-2xl font-extrabold tracking-tight">
                 AI Fashion
               </span>
@@ -529,7 +529,7 @@ export default function Index() {
       <footer className="py-10">
         <div className="mx-auto max-w-7xl px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/70">
           <div className="flex items-center gap-3">
-            <img src="/logo.jpg" alt="Logo" className="h-6 w-6" />
+            <img src="/images/logo.jpg" alt="Logo" className="h-6 w-6" />
             <span>AI Fashion</span>
             <span className="mx-2 opacity-30">•</span>
             <span>© {new Date().getFullYear()}</span>
