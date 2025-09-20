@@ -277,7 +277,7 @@ export default function Index() {
     }
     .blob3 {
       width: 560px; height: 560px;
-      right: -160px; top: 40%;
+      right: -90px; top: 40%;
       background: radial-gradient(closest-side, #ff6f6f, transparent 70%);
       animation: float2 30s ease-in-out infinite alternate;
     }
@@ -347,7 +347,7 @@ export default function Index() {
 
     {/* Динамичные «блики» */}
     <div className="pointer-events-none absolute inset-0">
-      <div className="blob blob2" />
+      <div className="blob1 blob" />
       <div className="blob blob3" />
     </div>
 
@@ -367,9 +367,6 @@ export default function Index() {
       </div>
     </Card>
   </div>
-
-
-
 </section>
 
 
