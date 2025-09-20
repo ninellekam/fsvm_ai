@@ -409,7 +409,7 @@ export default function Index() {
             relative h-[68vh] min-h-[520px] w-full
             bg-black
             before:absolute before:inset-0
-            before:bg-[image:linear-gradient(to_top,rgba(0,0,0,.72),rgba(22, 8, 94, 0.35),transparent),url('/images/ai-bg.png')]
+            before:bg-[image:linear-gradient(to_top,rgba(0,0,0,.72),rgba(22, 8, 94, 0.35),transparent),url('/images/ai-bg1.png')]
             before:bg-cover before:bg-center before:bg-no-repeat
             before:content-['']
           "
