@@ -248,6 +248,7 @@ export default function Index() {
             </div>
           </div>
     </div>
+    
 <style> {`
   .blobs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 
