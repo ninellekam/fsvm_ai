@@ -606,8 +606,8 @@ export default function Index() {
     <Card className="border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden">
       <div className="p-3 md:p-4">
         <BeforeAfter
-          before={examples?.[0]?.before || "/images/3.jpg"}
-          after={examples?.[0]?.after || "/images/skirt.jpg"}
+          before={examples?.[0]?.before || "/images/4.png"}
+          after={examples?.[0]?.after || "/images/1.png"}
           altBefore="Оригинал"
           altAfter="Фотосессия"
           initial={55}
