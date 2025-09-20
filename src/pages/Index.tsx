@@ -277,7 +277,7 @@ export default function Index() {
     width: 520px; height: 520px;
     left: -120px; top: 20%;
     background:
-      radial-gradient(closest-side at 40% 40%, #7b5cff, transparent 70%),
+      radial-gradient(closest-side at 40% 40%, #4426c6ff, transparent 70%),
       radial-gradient(closest-side at 70% 60%, rgba(0, 255, 213, .8), transparent 75%);
     animation-duration: 26s, 20s, 40s, 28s;
   }
@@ -294,7 +294,7 @@ export default function Index() {
     width: 620px; height: 620px;
     right: -140px; top: 40%;
     background:
-      radial-gradient(closest-side at 45% 55%, #6fafff, transparent 70%),
+      radial-gradient(closest-side at 45% 55%, #ea7d2fff, transparent 70%),
       radial-gradient(closest-side at 65% 35%, rgba(255, 108, 228, .85), transparent 75%);
     animation-duration: 34s, 24s, 44s, 30s;
   }
