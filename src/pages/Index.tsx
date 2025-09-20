@@ -206,12 +206,6 @@ export default function Index() {
       backgroundPosition: "center",
     }}
   >
-    {/* Динамичные «блики» */}
-<div class="blobs">
-  <div class="blob blob1"></div>
-  {/* <div class="blob blob2"></div> */}
-  <div class="blob blob3"></div>
-</div>
 
 
     {/* Ваш контент */}
@@ -254,15 +248,8 @@ export default function Index() {
             </div>
           </div>
     </div>
-
-  {/* Движущиеся «жидкие» анимации */}
-<style>{`
-  .blobs {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
+<style>
+  .blobs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 
   .blob {
     position: absolute;
@@ -272,24 +259,27 @@ export default function Index() {
     will-change: transform, border-radius, filter, background-position;
     filter: hue-rotate(0deg) blur(60px);
     background-size: 200% 200%;
+    /* те же анимации, что раньше */
     animation:
       morph 24s ease-in-out infinite alternate,
       swirl 18s ease-in-out infinite alternate,
       hue 30s linear infinite,
       float 26s ease-in-out infinite alternate;
+
+    /* заморозка по умолчанию + фиксированное начальное состояние */
+    animation-play-state: paused;
+    animation-fill-mode: both;
+    transform: translate(0, 0) scale(1) rotate(0deg);
   }
 
-  /* Блоб 1 — слева */
   .blob1 {
     width: 520px; height: 520px;
     left: -120px; top: 20%;
     background:
       radial-gradient(closest-side at 40% 40%, #7b5cff, transparent 70%),
-      radial-gradient(closest-side at 70% 60%, rgba(144, 0, 255, 0.8), transparent 75%);
+      radial-gradient(closest-side at 70% 60%, rgba(0, 255, 213, .8), transparent 75%);
     animation-duration: 26s, 20s, 40s, 28s;
   }
-
-  /* Блоб 2 — справа сверху */
   .blob2 {
     width: 560px; height: 560px;
     right: -160px; top: 10%;
@@ -299,50 +289,67 @@ export default function Index() {
     animation-duration: 30s, 22s, 36s, 32s;
     animation-direction: alternate, alternate, normal, alternate-reverse;
   }
-
-  /* Блоб 3 — справа ниже, крупнее */
   .blob3 {
     width: 620px; height: 620px;
-    right: -100px; top: 30%;
+    right: -140px; top: 40%;
     background:
       radial-gradient(closest-side at 45% 55%, #6fafff, transparent 70%),
       radial-gradient(closest-side at 65% 35%, rgba(255, 108, 228, .85), transparent 75%);
     animation-duration: 34s, 24s, 44s, 30s;
   }
 
-  /* Мягкое «плавление» формы */
   @keyframes morph {
     0%   { border-radius: 60% 40% 55% 45% / 45% 55% 50% 50%; }
     33%  { border-radius: 72% 28% 48% 52% / 40% 60% 56% 44%; }
     66%  { border-radius: 43% 57% 38% 62% / 58% 42% 63% 37%; }
     100% { border-radius: 66% 34% 58% 42% / 49% 51% 41% 59%; }
   }
-
-  /* Перелив градиента */
   @keyframes swirl {
     0%   { background-position: 0% 50%, 50% 0%; }
     50%  { background-position: 100% 50%, 50% 100%; }
     100% { background-position: 0% 50%, 50% 0%; }
   }
-
-  /* Лёгкая смена оттенка + постоянный blur */
   @keyframes hue {
     0%   { filter: hue-rotate(0deg) blur(60px); }
     100% { filter: hue-rotate(360deg) blur(60px); }
   }
-
-  /* Плавное дрейфование по экрану */
   @keyframes float {
     0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
     50%  { transform: translate(-60px, 30px) scale(1.06) rotate(-8deg); }
     100% { transform: translate(-140px, -10px) scale(1.12) rotate(-16deg); }
   }
 
-  /* Доступность: отключить движение при предпочтении reduced motion */
+  /* Когда есть класс .blobs-running — запуск анимаций */
+  .blobs-running .blob { animation-play-state: running; }
+
   @media (prefers-reduced-motion: reduce) {
     .blob { animation: none; }
   }
-`}</style>
+</style>
+
+<div class="blobs">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+
+<script>
+  // Включаем анимации только во время скролла
+  let scrollStopTimer;
+  const root = document.documentElement;
+
+  function onScroll() {
+    root.classList.add('blobs-running');
+    clearTimeout(scrollStopTimer);
+    scrollStopTimer = setTimeout(() => {
+      root.classList.remove('blobs-running');
+    }, 120); // пауза после остановки скролла
+  }
+
+  // Пассивный слушатель, чтобы не блокировать прокрутку
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
 
 </section>
 
