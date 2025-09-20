@@ -456,6 +456,11 @@ export default function Index() {
         </div>
       </section>
 
+<div class="blobs">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
       {/* FAQ (минималистично, как на Koda) */}
       <section id="faq" className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 md:px-8">
