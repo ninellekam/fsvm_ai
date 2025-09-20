@@ -448,6 +448,11 @@ export default function Index() {
           <h2 className="text-2xl md:text-3xl font-bold text-center tracking-tight">
             Примеры съемок
           </h2>
+          <div class="blobs">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
           <div className="mt-10 grid md:grid-cols-3 gap-6 md:gap-8">
             {examples.map((ex, idx) => (
               <BeforeAfter key={idx} before={ex.before} after={ex.after} title={ex.title} />
@@ -456,11 +461,7 @@ export default function Index() {
         </div>
       </section>
 
-<div class="blobs">
-  <div class="blob blob1"></div>
-  <div class="blob blob2"></div>
-  <div class="blob blob3"></div>
-</div>
+
       {/* FAQ (минималистично, как на Koda) */}
       <section id="faq" className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 md:px-8">
