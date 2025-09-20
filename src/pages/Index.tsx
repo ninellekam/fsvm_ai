@@ -277,15 +277,15 @@ export default function Index() {
     width: 520px; height: 520px;
     left: -120px; top: 20%;
     background:
-      radial-gradient(closest-side at 40% 40%, #4426c6ff, transparent 70%),
-      radial-gradient(closest-side at 70% 60%, rgba(0, 255, 213, .8), transparent 75%);
+      radial-gradient(closest-side at 40% 40%, #b89d7bff, transparent 70%),
+      radial-gradient(closest-side at 70% 60%, rgba(107, 11, 32, 0.8), transparent 75%);
     animation-duration: 26s, 20s, 40s, 28s;
   }
   .blob2 {
     width: 450px; height: 360px;
     right: -100px; top: 10%;
     background:
-      radial-gradient(closest-side at 55% 45%, #ed5cf7ff, transparent 70%),
+      radial-gradient(closest-side at 55% 45%, #860b2aff, transparent 70%),
       radial-gradient(closest-side at 35% 65%, rgba(239, 200, 138, 0.85), transparent 75%);
     animation-duration: 30s, 22s, 36s, 32s;
     animation-direction: alternate, alternate, normal, alternate-reverse;
@@ -295,7 +295,7 @@ export default function Index() {
     right: -140px; top: 40%;
     background:
       radial-gradient(closest-side at 45% 55%, #ea7d2fff, transparent 70%),
-      radial-gradient(closest-side at 65% 35%, rgba(255, 108, 228, .85), transparent 75%);
+      radial-gradient(closest-side at 65% 35%, rgba(155, 14, 45, 0.85), transparent 75%);
     animation-duration: 34s, 24s, 44s, 30s;
   }
 
