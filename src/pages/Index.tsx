@@ -248,7 +248,7 @@ export default function Index() {
             </div>
           </div>
     </div>
-    
+
 <style> {`
   .blobs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 
@@ -333,24 +333,6 @@ export default function Index() {
   <div class="blob blob2"></div>
   <div class="blob blob3"></div>
 </div>
-
-<script>
-  // Включаем анимации только во время скролла
-  let scrollStopTimer;
-  const root = document.documentElement;
-
-  function onScroll() {
-    root.classList.add('blobs-running');
-    clearTimeout(scrollStopTimer);
-    scrollStopTimer = setTimeout(() => {
-      root.classList.remove('blobs-running');
-    }, 120); // пауза после остановки скролла
-  }
-
-  // Пассивный слушатель, чтобы не блокировать прокрутку
-  window.addEventListener('scroll', onScroll, { passive: true });
-</script>
-
 
 </section>
 
