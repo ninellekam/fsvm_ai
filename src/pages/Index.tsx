@@ -459,7 +459,7 @@ export default function Index() {
             </div>
           </div>
     </div>
-  </div>
+  {/* </div> */}
 
   {/* Локальные стили для анимации */}
   <style>{`
