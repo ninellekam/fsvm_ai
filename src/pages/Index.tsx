@@ -275,6 +275,12 @@ export default function Index() {
       background: radial-gradient(closest-side, #ff6f6f, transparent 70%);
       animation: float2 30s ease-in-out infinite alternate;
     }
+    .blob3 {
+      width: 560px; height: 560px;
+      right: -160px; top: 40%;
+      background: radial-gradient(closest-side, #ff6f6f, transparent 70%);
+      animation: float2 30s ease-in-out infinite alternate;
+    }
     @keyframes float1 {
       0%   { transform: translate(0, 0) scale(1); }
       50%  { transform: translate(60px, -40px) scale(1.05) rotate(5deg); }
@@ -341,10 +347,10 @@ export default function Index() {
 
     {/* Динамичные «блики» */}
     <div className="pointer-events-none absolute inset-0">
-      <div className="blob blob1" />
       <div className="blob blob2" />
+      <div className="blob blob3" />
     </div>
-    
+
     {/* Правая колонка — одна карточка с одним Before/After */}
     <Card className="border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden">
       <div className="p-3 md:p-4">
