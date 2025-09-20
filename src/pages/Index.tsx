@@ -590,7 +590,7 @@ export default function Index() {
           <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
             {/* Замените изображение под кейс бренда */}
             <img
-              src="/images/brand-showcase.jpg"
+              src="/images/4.png"
               alt=""
               className="w-full h-full object-cover"
             />
