@@ -409,6 +409,43 @@ export default function Index() {
       </div>
     </Card>
   </div>
+
+    {/* Локальные стили для анимации */}
+  <style>{`
+    .blob {
+      position: absolute;
+      border-radius: 30%;
+      filter: blur(60px);
+      opacity: .35;
+      mix-blend-mode: screen;
+      will-change: transform;
+    }
+    .blob1 {
+      width: 520px; height: 520px;
+      left: -120px; top: 20%;
+      background: radial-gradient(closest-side, #7b5cff, transparent 70%);
+      animation: float1 26s ease-in-out infinite alternate;
+    }
+    .blob2 {
+      width: 560px; height: 560px;
+      right: -160px; top: 10%;
+      background: radial-gradient(closest-side, #ff6f6f, transparent 70%);
+      animation: float2 30s ease-in-out infinite alternate;
+    }
+    @keyframes float1 {
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(60px, -40px) scale(1.05) rotate(5deg); }
+      100% { transform: translate(140px, 20px) scale(1.1) rotate(10deg); }
+    }
+    @keyframes float2 {
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(-80px, 20px) scale(1.06) rotate(-6deg); }
+      100% { transform: translate(-160px, -30px) scale(1.12) rotate(-12deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .blob1, .blob2 { animation: none; }
+    }
+  `}</style>
 </section>
 
 
