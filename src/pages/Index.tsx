@@ -421,7 +421,43 @@ export default function Index() {
 
     {/* Ваш контент */}
     <div className="relative z-10 mx-auto max-w-7xl h-full px-4 md:px-8">
-      {/* ... */}
+            <div className="flex h-full items-end md:items-center">
+              <div className="pb-10 md:pb-0 max-w-3xl">
+                <span className="inline-block rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs uppercase tracking-wide text-white/70 mb-4">
+                  beta-тестирование
+                </span>
+                <h1 className="text-[2rem] leading-[1.1] md:text-[3.2rem] font-black tracking-tight">
+                  AI‑фотограф для брендов
+                  <span className="block">студийное качество без студии</span>
+                </h1>
+                <p className="mt-4 text-white/80 text-base md:text-lg max-w-2xl">
+                  Генерируйте фотосессии товаров в нужных стилях и локациях за минуты.
+                  Без логистики, модели и аренды — просто загрузите продукт.
+                </p>
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://t.me/fsvm_aifashion_bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-full bg-white text-black font-semibold px-6 py-3 hover:opacity-90 transition"
+                  >
+                    Попробовать бесплатно
+                  </a>
+                  <a
+                    href="#for-brands"
+                    className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 hover:bg-white/10 transition"
+                  >
+                    Как это работает
+                  </a>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2 text-xs text-white/65">
+                  <span className="rounded-full border border-white/15 px-3 py-1">5–10 минут</span>
+                  <span className="rounded-full border border-white/15 px-3 py-1">10× дешевле</span>
+                  <span className="rounded-full border border-white/15 px-3 py-1">Любые локации</span>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   </div>
 
