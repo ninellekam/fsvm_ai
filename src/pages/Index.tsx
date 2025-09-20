@@ -282,10 +282,10 @@ export default function Index() {
     animation-duration: 26s, 20s, 40s, 28s;
   }
   .blob2 {
-    width: 560px; height: 560px;
-    right: -160px; top: 10%;
+    width: 450px; height: 360px;
+    right: -100px; top: 10%;
     background:
-      radial-gradient(closest-side at 55% 45%, #ff6f6f, transparent 70%),
+      radial-gradient(closest-side at 55% 45%, #971554ff, transparent 70%),
       radial-gradient(closest-side at 35% 65%, rgba(255, 210, 64, .85), transparent 75%);
     animation-duration: 30s, 22s, 36s, 32s;
     animation-direction: alternate, alternate, normal, alternate-reverse;
