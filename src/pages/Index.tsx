@@ -252,7 +252,6 @@ export default function Index() {
             </div>
           </div>
     </div>
-  {/* </div> */}
 
   {/* Локальные стили для анимации */}
   <style>{`
@@ -292,60 +291,7 @@ export default function Index() {
   `}</style>
 </section>
 
-     {/* <section className="relative">
-        <div
-          className="
-            relative h-[68vh] min-h-[520px] w-full
-            bg-black
-            before:absolute before:inset-0
-            before:bg-[image:linear-gradient(to_top,rgba(0,0,0,.72),rgba(22, 8, 94, 0.35),transparent),url('/images/ai-bg1.png')]
-            before:bg-cover before:bg-center before:bg-no-repeat
-            before:content-['']
-          "
-        >
-          <div className="relative z-10 mx-auto max-w-7xl h-full px-4 md:px-8">
-            <div className="flex h-full items-end md:items-center">
-              <div className="pb-10 md:pb-0 max-w-3xl">
-                <span className="inline-block rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs uppercase tracking-wide text-white/70 mb-4">
-                  beta-тестирование
-                </span>
-                <h1 className="text-[2rem] leading-[1.1] md:text-[3.2rem] font-black tracking-tight">
-                  AI‑фотограф для брендов
-                  <span className="block">студийное качество без студии</span>
-                </h1>
-                <p className="mt-4 text-white/80 text-base md:text-lg max-w-2xl">
-                  Генерируйте фотосессии товаров в нужных стилях и локациях за минуты.
-                  Без логистики, модели и аренды — просто загрузите продукт.
-                </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="https://t.me/fsvm_aifashion_bot"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full bg-white text-black font-semibold px-6 py-3 hover:opacity-90 transition"
-                  >
-                    Попробовать бесплатно
-                  </a>
-                  <a
-                    href="#for-brands"
-                    className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 hover:bg-white/10 transition"
-                  >
-                    Как это работает
-                  </a>
-                </div>
-                <div className="mt-4 flex flex-wrap gap-2 text-xs text-white/65">
-                  <span className="rounded-full border border-white/15 px-3 py-1">5–10 минут</span>
-                  <span className="rounded-full border border-white/15 px-3 py-1">10× дешевле</span>
-                  <span className="rounded-full border border-white/15 px-3 py-1">Любые локации</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
-
-      {/* Для брендов */}
 {/* Для брендов — одна карточка и один Before/After внутри */}
 <section
   id="for-brands"
@@ -393,6 +339,12 @@ export default function Index() {
       </div>
     </div>
 
+    {/* Динамичные «блики» */}
+    <div className="pointer-events-none absolute inset-0">
+      <div className="blob blob1" />
+      <div className="blob blob2" />
+    </div>
+    
     {/* Правая колонка — одна карточка с одним Before/After */}
     <Card className="border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden">
       <div className="p-3 md:p-4">
@@ -410,42 +362,8 @@ export default function Index() {
     </Card>
   </div>
 
-    {/* Локальные стили для анимации */}
-  <style>{`
-    .blob {
-      position: absolute;
-      border-radius: 30%;
-      filter: blur(60px);
-      opacity: .35;
-      mix-blend-mode: screen;
-      will-change: transform;
-    }
-    .blob1 {
-      width: 520px; height: 520px;
-      left: -120px; top: 20%;
-      background: radial-gradient(closest-side, #7b5cff, transparent 70%);
-      animation: float1 26s ease-in-out infinite alternate;
-    }
-    .blob2 {
-      width: 560px; height: 560px;
-      right: -160px; top: 10%;
-      background: radial-gradient(closest-side, #ff6f6f, transparent 70%);
-      animation: float2 30s ease-in-out infinite alternate;
-    }
-    @keyframes float1 {
-      0%   { transform: translate(0, 0) scale(1); }
-      50%  { transform: translate(60px, -40px) scale(1.05) rotate(5deg); }
-      100% { transform: translate(140px, 20px) scale(1.1) rotate(10deg); }
-    }
-    @keyframes float2 {
-      0%   { transform: translate(0, 0) scale(1); }
-      50%  { transform: translate(-80px, 20px) scale(1.06) rotate(-6deg); }
-      100% { transform: translate(-160px, -30px) scale(1.12) rotate(-12deg); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .blob1, .blob2 { animation: none; }
-    }
-  `}</style>
+
+
 </section>
 
 
@@ -562,6 +480,7 @@ export default function Index() {
           </Card>
         </div>
       </section>
+      
 
       {/* Подвал в духе Koda: лаконичный */}
       <footer className="py-10">
