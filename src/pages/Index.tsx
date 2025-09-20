@@ -248,7 +248,7 @@ export default function Index() {
             </div>
           </div>
     </div>
-<style>
+<style> {`
   .blobs { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 
   .blob {
@@ -324,7 +324,7 @@ export default function Index() {
 
   @media (prefers-reduced-motion: reduce) {
     .blob { animation: none; }
-  }
+  `}
 </style>
 
 <div class="blobs">
