@@ -254,7 +254,7 @@ export default function Index() {
     </div>
 
   {/* Локальные стили для анимации */}
-  <style>{`
+  {/* <style>{`
     .blob {
       position: absolute;
       border-radius: 50%;
@@ -294,7 +294,96 @@ export default function Index() {
     @media (prefers-reduced-motion: reduce) {
       .blob1, .blob2 { animation: none; }
     }
-  `}</style>
+  `}</style> */}
+  {/* Движущиеся «жидкие» анимации */}
+<style>{`
+  .blobs {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 60% 40% 55% 45% / 45% 55% 50% 50%;
+    opacity: .45;
+    mix-blend-mode: screen;
+    will-change: transform, border-radius, filter, background-position;
+    filter: hue-rotate(0deg) blur(60px);
+    background-size: 200% 200%;
+    animation:
+      morph 24s ease-in-out infinite alternate,
+      swirl 18s ease-in-out infinite alternate,
+      hue 30s linear infinite,
+      float 26s ease-in-out infinite alternate;
+  }
+
+  /* Блоб 1 — слева */
+  .blob1 {
+    width: 520px; height: 520px;
+    left: -120px; top: 20%;
+    background:
+      radial-gradient(closest-side at 40% 40%, #7b5cff, transparent 70%),
+      radial-gradient(closest-side at 70% 60%, rgba(0, 255, 213, .8), transparent 75%);
+    animation-duration: 26s, 20s, 40s, 28s;
+  }
+
+  /* Блоб 2 — справа сверху */
+  .blob2 {
+    width: 560px; height: 560px;
+    right: -160px; top: 10%;
+    background:
+      radial-gradient(closest-side at 55% 45%, #ff6f6f, transparent 70%),
+      radial-gradient(closest-side at 35% 65%, rgba(255, 210, 64, .85), transparent 75%);
+    animation-duration: 30s, 22s, 36s, 32s;
+    animation-direction: alternate, alternate, normal, alternate-reverse;
+  }
+
+  /* Блоб 3 — справа ниже, крупнее */
+  .blob3 {
+    width: 620px; height: 620px;
+    right: -140px; top: 40%;
+    background:
+      radial-gradient(closest-side at 45% 55%, #6fafff, transparent 70%),
+      radial-gradient(closest-side at 65% 35%, rgba(255, 108, 228, .85), transparent 75%);
+    animation-duration: 34s, 24s, 44s, 30s;
+  }
+
+  /* Мягкое «плавление» формы */
+  @keyframes morph {
+    0%   { border-radius: 60% 40% 55% 45% / 45% 55% 50% 50%; }
+    33%  { border-radius: 72% 28% 48% 52% / 40% 60% 56% 44%; }
+    66%  { border-radius: 43% 57% 38% 62% / 58% 42% 63% 37%; }
+    100% { border-radius: 66% 34% 58% 42% / 49% 51% 41% 59%; }
+  }
+
+  /* Перелив градиента */
+  @keyframes swirl {
+    0%   { background-position: 0% 50%, 50% 0%; }
+    50%  { background-position: 100% 50%, 50% 100%; }
+    100% { background-position: 0% 50%, 50% 0%; }
+  }
+
+  /* Лёгкая смена оттенка + постоянный blur */
+  @keyframes hue {
+    0%   { filter: hue-rotate(0deg) blur(60px); }
+    100% { filter: hue-rotate(360deg) blur(60px); }
+  }
+
+  /* Плавное дрейфование по экрану */
+  @keyframes float {
+    0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50%  { transform: translate(-60px, 30px) scale(1.06) rotate(-8deg); }
+    100% { transform: translate(-140px, -10px) scale(1.12) rotate(-16deg); }
+  }
+
+  /* Доступность: отключить движение при предпочтении reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .blob { animation: none; }
+  }
+`}</style>
+
 </section>
 
 
