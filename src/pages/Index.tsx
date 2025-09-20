@@ -329,9 +329,9 @@ export default function Index() {
 </style>
 
 <div class="blobs">
-  <div class="blob blob1"></div>
-  <div class="blob blob2"></div>
   <div class="blob blob3"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob1"></div>
 </div>
 
 </section>
