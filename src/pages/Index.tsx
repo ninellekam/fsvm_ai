@@ -407,7 +407,7 @@ export default function Index() {
         {/* Замените на своё полноширинное фото в стиле Koda */}
         <div className="relative h-[68vh] min-h-[520px] w-full overflow-hidden">
           <img
-            src="/images/ai-bg.jpg"
+            src="/images/ai-bg.png"
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
           />
