@@ -506,6 +506,11 @@ export default function Index() {
         </div>
       </section>
 
+<div class="blobs">
+  <div class="blob blob2"></div>
+  <div class="blob blob1"></div>
+  <div class="blob blob3"></div>
+</div>
       {/* CTA финальный */}
       <section className="py-16 md:py-20 bg-white/[0.03]">
         <div className="mx-auto max-w-5xl px-4 md:px-8">
