@@ -207,10 +207,12 @@ export default function Index() {
     }}
   >
     {/* Динамичные «блики» */}
-    <div className="pointer-events-none absolute inset-0">
-      <div className="blob blob1" />
-      <div className="blob blob2" />
-    </div>
+<div class="blobs">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+
 
     {/* Ваш контент */}
     <div className="relative z-10 mx-auto max-w-7xl h-full px-4 md:px-8">
@@ -253,48 +255,6 @@ export default function Index() {
           </div>
     </div>
 
-  {/* Локальные стили для анимации */}
-  {/* <style>{`
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(60px);
-      opacity: .35;
-      mix-blend-mode: screen;
-      will-change: transform;
-    }
-    .blob1 {
-      width: 520px; height: 520px;
-      left: -120px; top: 20%;
-      background: radial-gradient(closest-side, #7b5cff, transparent 70%);
-      animation: float1 26s ease-in-out infinite alternate;
-    }
-    .blob2 {
-      width: 560px; height: 560px;
-      right: -160px; top: 10%;
-      background: radial-gradient(closest-side, #ff6f6f, transparent 70%);
-      animation: float2 30s ease-in-out infinite alternate;
-    }
-    .blob3 {
-      width: 560px; height: 560px;
-      right: -90px; top: 40%;
-      background: radial-gradient(closest-side, #ff6f6f, transparent 70%);
-      animation: float2 30s ease-in-out infinite alternate;
-    }
-    @keyframes float1 {
-      0%   { transform: translate(0, 0) scale(1); }
-      50%  { transform: translate(60px, -40px) scale(1.05) rotate(5deg); }
-      100% { transform: translate(140px, 20px) scale(1.1) rotate(10deg); }
-    }
-    @keyframes float2 {
-      0%   { transform: translate(0, 0) scale(1); }
-      50%  { transform: translate(-80px, 20px) scale(1.06) rotate(-6deg); }
-      100% { transform: translate(-160px, -30px) scale(1.12) rotate(-12deg); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .blob1, .blob2 { animation: none; }
-    }
-  `}</style> */}
   {/* Движущиеся «жидкие» анимации */}
 <style>{`
   .blobs {
@@ -434,11 +394,12 @@ export default function Index() {
       </div>
     </div>
 
-    {/* Динамичные «блики» */}
-    <div className="pointer-events-none absolute inset-0">
-      <div className="blob1 blob" />
-      <div className="blob blob3" />
-    </div>
+<div class="blobs">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+
 
     {/* Правая колонка — одна карточка с одним Before/After */}
     <Card className="border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden">
