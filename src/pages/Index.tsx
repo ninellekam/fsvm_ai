@@ -29,9 +29,9 @@ const examples = [
     title: "Юбка плетённая — стиль «Дюна». Сырое фото изделия (До)/Фэшн-фотосессия от ИИ (После)",
   },
   {
-    before: "/images/5.jpg",
-    after: "/images/2.png",
-    title: "Мини с ремнём — горный сет. Сырое фото изделия (До)/Фэшн-фотосессия от ИИ (После)",
+    before: "/images/5.png",
+    after: "/images/2.jpg",
+    title: "Ночнушка с кружевами — спальный стиль. Сырое фото изделия (До)/Фэшн-фотосессия от ИИ (После)",
   },
   {
     before: "/images/8.jpg",
@@ -381,7 +381,7 @@ export default function Index() {
       <ul className="mt-6 space-y-3">
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
-          <span className="text-white/85">Загружаете 6 фото вашей одежды в сырой сьемке (только одежду) </span>
+          <span className="text-white/85">Загружаете 6 фото вашей одежды в сырой сьемке (одежду на белом фоне) </span>
         </li>
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
