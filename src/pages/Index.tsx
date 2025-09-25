@@ -187,7 +187,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="rounded-xl bg-white px-4 py-3 text-black font-semibold text-center"
                 >
-                  Попробовать бесплатно
+                  Попробовать 
                 </a>
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function Index() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-full bg-white text-black font-semibold px-6 py-3 hover:opacity-90 transition"
                   >
-                    Попробовать бесплатно
+                    Попробовать 
                   </a>
                   <a
                     href="#for-brands"
@@ -471,7 +471,7 @@ export default function Index() {
               },
               {
                 q: "Сколько стоит?",
-                a: "На старте — бесплатно с лимитами. Далее — гибкие тарифы, в среднем до 10× дешевле классической студии.",
+                a: "На старте — базовая подписка с лимитами (1490 руб). Далее — гибкие тарифы, в среднем до 10× дешевле классической студии.",
               },
               {
                 q: "Где обрабатываются данные?",
@@ -512,7 +512,7 @@ export default function Index() {
           <Card className="border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl">
             <CardHeader>
               <CardTitle className="text-center text-2xl md:text-3xl">
-                Начните сегодня — получите первые результаты бесплатно
+                Начните сегодня — получите первые результаты 
               </CardTitle>
             </CardHeader>
             <CardContent>
