@@ -24,19 +24,19 @@ const features = [
 
 const examples = [
   {
-    before: "/images/3.jpg",
-    after: "/images/skirt.jpg",
-    title: "Юбка плетённая — стиль «Дюна»",
+    before: "/images/skirt.jpg",
+    after: "/images/3.jpg",
+    title: "Юбка плетённая — стиль «Дюна». Сырое фото изделия (До)/Фэшн-фотосессия от ИИ (После)",
   },
   {
-    before: "/images/2.jpg",
-    after: "/images/5.png",
-    title: "Мини с ремнём — горный сет",
+    before: "/images/5.jpg",
+    after: "/images/2.png",
+    title: "Мини с ремнём — горный сет. Сырое фото изделия (До)/Фэшн-фотосессия от ИИ (После)",
   },
   {
-    before: "/images/7.jpg",
-    after: "/images/8.jpg",
-    title: "Юбка с разрезом — Марокко",
+    before: "/images/8.jpg",
+    after: "/images/7.jpg",
+    title: "Юбка с разрезом — Марокко. Сырое фото изделия (До)/Фэшн-фотосессия от ИИ (После)",
   },
 ];
 
@@ -220,8 +220,8 @@ export default function Index() {
                   <span className="block">студийное качество без студии</span>
                 </h1>
                 <p className="mt-4 text-white/80 text-base md:text-lg max-w-2xl">
-                  Генерируйте фотосессии товаров в нужных стилях и локациях за минуты.
-                  Без логистики, модели и аренды — просто загрузите продукт.
+                  Быстро создавайте качественные фотографии вашей одежды на виртуальных моделях в любых локациях с помощью искусственного интеллекта. Экономьте время и деньги: не нужны фотосессии, студии и модели — всё происходит онлайн за минуты.
+                  Идеально для владельцев шоурумов, интернет-магазинов, дизайнеров и стилистов.
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
                   <a
@@ -352,21 +352,21 @@ export default function Index() {
         Для брендов и маркетплейсов
       </h2>
       <p className="mt-4 text-white/80">
-        Быстро проверяйте гипотезы и собирайте каталоги без студийной рутины.
-        Единый стиль, повторяемые ракурсы, масштабируемая выдача.
+        Экономьте время и бюджет: автоматизируйте создание каталожных фото одежды. 
+        Фотосессии высокого качества в любом виде — всё это без фотостудий, моделей, перелетов и лишней рутины, а главное без лишних трат.
       </p>
       <ul className="mt-6 space-y-3">
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
-          <span className="text-white/85">Единый стиль съёмки для линейки</span>
+          <span className="text-white/85">Загружаете 6 фото вашей одежды в сырой сьемке (только одежду) </span>
         </li>
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
-          <span className="text-white/85">Сцены под сезонные кампании</span>
+          <span className="text-white/85">Указываете желаемое описание и локацию для будущей фотосессии </span>
         </li>
         <li className="flex gap-3">
           <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
-          <span className="text-white/85">Массовая генерация карточек товара</span>
+          <span className="text-white/85">Получаете готовые реалистичные снимки для каталога, соцсетей и рекламы</span>
         </li>
       </ul>
       <div className="mt-8 flex gap-3">
@@ -395,14 +395,14 @@ export default function Index() {
     <Card className="border-white/10 bg-black/40 backdrop-blur-xl overflow-hidden">
       <div className="p-3 md:p-4">
         <BeforeAfter
-          before={"/images/1.png"}
-          after={"/images/4.png"}
+          before={"/images/4.png"}
+          after={"/images/1.png"}
           altBefore="Оригинал"
           altAfter="Фотосессия"
           initial={55}
         />
         <p className="text-center text-xs text-white/60 mt-3">
-          Свайпните ползунок, чтобы сравнить «до/после»
+          Свайпните ползунок, чтобы сравнить «Сырое фото изделия (До)/Фэшн-фотосессия от ИИ (После)»
         </p>
       </div>
     </Card>
