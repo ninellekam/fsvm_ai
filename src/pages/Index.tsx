@@ -351,6 +351,32 @@ export default function Index() {
   <div className="mx-auto max-w-7xl px-4 md:px-8 grid md:grid-cols-2 gap-10 items-start">
     {/* Левая колонка — текст и CTA */}
     <div>
+      <h2 className="mt-10 text-2xl md:text-3xl font-bold tracking-tight">
+        Наши преимущества
+      </h2>
+      <p className="mt-4 text-white/80">
+        Экономьте время и деньги: не нужны фотосессии, студии и модели — всё происходит онлайн за минуты.<br />
+        Идеально подходит для владельцев шоурумов, интернет-магазинов, дизайнеров и стилистов.<br />
+      </p>
+      <ul className="mt-6 space-y-3">
+        <li className="flex gap-3">
+          <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
+          <span className="text-white/85">Процесс полностью автоматизирован и не требует специальных навыков</span>
+        </li>
+        <li className="flex gap-3">
+          <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
+          <span className="text-white/85">Результаты готовы всего за несколько минут</span>
+        </li>
+        <li className="flex gap-3">
+          <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
+          <span className="text-white/85">Высокое качество изображений для любых целей: каталоги, соцсети, реклама</span>
+        </li>
+        <li className="flex gap-3">
+          <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-300 text-xs">✓</span>
+          <span className="text-white/85">Экономия на организации съёмок и привлечении моделей</span>
+        </li>
+      </ul>
+
       <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
         Для брендов и маркетплейсов
       </h2>
