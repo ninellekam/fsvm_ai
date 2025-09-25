@@ -390,12 +390,14 @@ export default function Index() {
           <span className="text-white/85">Получаете готовые реалистичные снимки для каталога, соцсетей и рекламы</span>
         </li>
       </ul>
-      <div className="mt-8">
-        <span className="block text-sm font-semibold text-emerald-300 mb-1">Для кого?</span>
-        <span className="text-white/80">
-          Идеально для владельцев шоурумов, интернет-магазинов, дизайнеров и стилистов.
-        </span>
-      </div>
+
+            <h2 className="mt-12 text-2xl md:text-3xl font-bold tracking-tight">
+        Для кого?
+      </h2>
+      <p className="mt-4 text-white/80">
+        Идеально для владельцев шоурумов, интернет-магазинов, дизайнеров и стилистов.<br />
+      </p>
+      </ul>
       <div className="mt-8 flex gap-3">
         <a href="#examples" className="rounded-full border border-white/20 px-5 py-2.5 hover:bg-white/10 transition">
           Смотреть примеры
