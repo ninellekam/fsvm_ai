@@ -394,6 +394,7 @@ export default function Index() {
       </ul>
     </div>
 
+
 <div class="blobs">
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
