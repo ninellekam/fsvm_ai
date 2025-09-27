@@ -330,7 +330,7 @@ export default function Index() {
     .blob { animation: none; }
     html { scroll-padding-top: 88px; }
     section[id] { scroll-margin-top: 88px; }
-    html, body { margin: 0; }`}
+    html, body { margin: 0; padding: 0; }`}
 </style>
 
 <div class="blobs">
