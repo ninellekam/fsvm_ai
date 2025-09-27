@@ -125,7 +125,7 @@ export default function Index() {
       {/* Навигация */}
       <nav className="sticky top-0 z-40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mt-3 mb-4 flex items-center justify-between rounded-2xl border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl">
+          <div className="mt-3 mb-6 flex items-center justify-between rounded-2xl border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl">
             <div className="flex items-center gap-3">
               {/* Замените логотип */}
               <img src="/images/logo.jpg" alt="Logo" className="h-8 w-8" />
