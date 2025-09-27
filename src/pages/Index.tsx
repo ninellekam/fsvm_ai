@@ -22,7 +22,6 @@ const features = [
   { title: "Контроль качества", desc: "Повторяемость сетапов и стилей" },
 ];
 
-
 const examples = [
   {
     before: "/images/skirt.jpg",
