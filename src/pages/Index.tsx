@@ -328,7 +328,7 @@ export default function Index() {
 
   @media (prefers-reduced-motion: reduce) {
     .blob { animation: none; }
-    
+    html { scroll-padding-top: 88px; }
     section[id] { scroll-margin-top: 88px; }`}
 </style>
 
