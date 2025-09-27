@@ -198,7 +198,7 @@ export default function Index() {
       {/* HERO (фон: широкое изображение + затемнение) */}
       <section className="relative">
   <div
-    className="relative h-[68svh] min-h-[520px] w-full overflow-hidden bg-black"
+    className="relative h-[68svh] min-h-[520px] w-full overflow-visible md:overflow-hidden bg-black"
     style={{
       backgroundImage:
         "linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.35), transparent), url('/images/ai-bg.svg')",
